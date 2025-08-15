@@ -13,17 +13,17 @@ html, body {
     height: 100%;
 }
 
-body {
-
-}
-
 .site-container {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(150px, 300px) auto;
     grid-template-rows: 1fr 5fr;
 }
+
+
+
+/* ===Header Section and contents=== */
 
 .header {
     background: hsl(0, 0%, 100%);
@@ -37,11 +37,73 @@ body {
     z-index: 11;
 }
 
+
+
+/* ===Sidebar Section and contents=== */
+
 .sidebar {
     background: hsl(201, 79%, 46%);
     grid-row: 1 / 3;
     grid-column: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
 }
+
+.sidebar__heading svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    display: inline;
+    fill: white;
+    vertical-align: middle;
+}
+
+.sidebar__heading h1 {
+    color: white;
+    vertical-align: middle;
+    display: inline;
+    font-size: 1.8rem;
+}
+
+.nav-section {
+    display: grid;
+    height: min-content;
+    margin-top: 4rem;
+}
+
+.nav-section__link-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-grow: 0;
+    padding: 0.25rem 0;
+}
+
+.nav-section__link-group:hover {
+    background: #ffffff31;
+}
+
+.nav-section__link-group svg {
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+    display: inline;
+}
+
+.nav-section__link-group p {
+    color: white;
+    display: inline;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+
+/* ===Main Section and contents=== */
 
 .main {
     background: hsl(0, 100%, 98%);
