@@ -1,13 +1,15 @@
 @import url("josh-c-styles.css");
 
 :root {
-    /*Variables here*/
+    --sidebar-padding: 1.5rem;
 }
 
 * {
     box-sizing: border-box;
     font-family: "Ubuntu-Sans", sans-serif;
 }
+
+/* ===Base=== */
 
 html, body {
     height: 100%;
@@ -20,8 +22,6 @@ html, body {
     grid-template-columns: minmax(150px, 300px) auto;
     grid-template-rows: 1fr 5fr;
 }
-
-
 
 /* ===Header Section and contents=== */
 
@@ -49,8 +49,11 @@ html, body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content;
-    padding-left: 1.5rem;
     padding-top: 1rem;
+}
+
+.sidebar__heading {
+    padding-left: var(--sidebar-padding);
 }
 
 .sidebar__heading svg {
@@ -78,9 +81,10 @@ html, body {
 .nav-section__link-group {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
     flex-grow: 0;
-    padding: 0.25rem 0;
+    padding: 0.4rem 0;
+    padding-left: var(--sidebar-padding);
 }
 
 .nav-section__link-group:hover {
@@ -97,14 +101,18 @@ html, body {
 .nav-section__link-group p {
     color: white;
     display: inline;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
-
-
 
 /* ===Main Section and contents=== */
 
 .main {
     background: hsl(0, 100%, 98%);
+}
+
+/* ===Utilities=== */
+
+.flip {
+    transform: scaleX(-1);
 }
