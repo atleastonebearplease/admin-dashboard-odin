@@ -237,9 +237,10 @@ html, body {
     display: grid;
 
     grid-template-rows: 2.5rem 2.5rem 1fr;
-    grid-template-columns: minmax(300px, 4fr) 20rem;
+    grid-template-columns: minmax(300px, 4fr) 22rem;
 
     max-width: 100rem;
+    padding: 0 1rem;
 }
 
 .main__heading {
@@ -251,11 +252,9 @@ html, body {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
 
-    padding: 0 2rem;
-
     display: grid;
     grid-auto-rows: 17rem;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
 
     justify-content: center;
     align-items: start;
@@ -285,6 +284,7 @@ html, body {
     grid-row: 2 / 4;
     grid-column: 2 / 3;
     overflow: visible;
+    padding-left: 2rem;
 }
 
 .widget-group {
@@ -306,25 +306,41 @@ html, body {
     padding: 2rem;
 }
 
-.widget-card__announcement {
-    height: min-content;
-    border-bottom-color: lightgrey;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
+.widget-card a,
+.widget-card a:visited,
+.widget-card a:hover,
+.widget-card a:active {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
-.widget-card__announcement:last-child {
+.announcement-wrapper {
+    border-bottom: 2px solid lightgrey;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    height: 100%;
+}
+
+.announcement {
+    height: min-content;
+}
+
+.announcement-wrapper:first-child {
+    margin-top: 0;
+}
+
+.announcement-wrapper:last-child {
+    padding-bottom: 0;
+}
+
+.announcement-wrapper:last-child {
     border-style: none;
 }
 
-.widget-card__announcement p {
+.announcement p {
     color: grey;
     font-size: .75rem;
-    padding-bottom: 1rem;
-}
-
-.widget-card__announcement h4 {
-    padding-top: 1rem;
 }
 
 /* ===Utilities=== */
