@@ -245,7 +245,6 @@ html, body {
 
 .main__heading {
     grid-row: 2/3;
-    margin-left: 2rem;
 }
 
 .project-section {
@@ -308,6 +307,7 @@ html, body {
     padding: 2rem;
 }
 
+/*Get rid of the styling when using anchor tags to wrap text*/
 .widget-card a,
 .widget-card a:visited,
 .widget-card a:hover,
