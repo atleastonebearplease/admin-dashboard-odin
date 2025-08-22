@@ -155,6 +155,22 @@ html, body {
     
     width: 6rem;
     height: 2.25rem;
+
+    cursor: pointer;
+}
+
+.action-button:active {
+    background-color: hsl(201, 73%, 40%);
+    color: white;
+    font-weight: bold;
+
+    border-radius: 2rem;
+    border: 0px;
+    
+    width: 6rem;
+    height: 2.25rem;
+
+    cursor: pointer;
 }
 
 /* ===Sidebar Section and contents=== */
@@ -462,7 +478,15 @@ input[type="search"]::-webkit-search-cancel-button {
     display: inline-block;
     position: relative;
     z-index: 1;
-    outline: 1px solid red;
     padding: 0.25rem;
     margin: -0.25rem;
+}
+
+.increase-clickable-area--medium {
+    box-sizing: content-box;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    margin: -0.5rem;
 }
