@@ -218,6 +218,9 @@ html, body {
     flex-grow: 0;
     padding: 0.4rem 0;
     padding-left: var(--sidebar-padding);
+
+    user-select: none;
+    cursor: pointer;
 }
 
 .nav-section__link-group:hover {
@@ -320,6 +323,7 @@ html, body {
     overflow: hidden;
     padding-left: 2rem;
     height: 100vh;
+    padding-right: 0.5rem;
 }
 
 .widget-group {
