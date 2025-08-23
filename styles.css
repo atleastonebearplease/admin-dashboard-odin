@@ -298,6 +298,13 @@ html, body {
     grid-template-rows: 2fr 1fr;
 
     padding: 2rem;
+    cursor: pointer;
+
+    transition: transform ease-in-out 50ms;
+}
+
+.project__card:hover {
+    transform: scale(1.01) translate(-2px, -2px);
 }
 
 .project__card svg {
